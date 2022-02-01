@@ -41,7 +41,6 @@ public class MetricConversionApplicationController {
     private ITemperatureService temperatureService;
 
     @RequestMapping(value = "/fromTemperatureType/{fromTemperatureType}/temperatureValue/{temperatureValue}", method = GET)
-    @ResponseBody
     public HttpEntity<TemperatureResponse> getTemperature(@PathVariable("fromTemperatureType") String fromTemperatureType,
                                                           @PathVariable("temperatureValue") double temperatureValue) {
 
@@ -57,7 +56,6 @@ public class MetricConversionApplicationController {
 
 
     @RequestMapping(value = "/fromDistanceType/{fromDistanceType}/distanceValue/{distanceValue}", method = GET)
-    @ResponseBody
     public HttpEntity<DistanceResponse> getDistance(@PathVariable("fromDistanceType") String fromDistanceType,
                                                     @PathVariable("distanceValue") double distanceValue) {
 
@@ -72,7 +70,6 @@ public class MetricConversionApplicationController {
     }
 
     @RequestMapping(value = "/fromCurrencyType/{fromCurrencyType}/currencyValue/{currencyValue}", method = GET)
-    @ResponseBody
     public HttpEntity<CurrencyResponse> getDistance(@PathVariable("fromCurrencyType") String fromCurrencyType,
                                                     @PathVariable("currencyValue") BigDecimal currencyValue) {
 
